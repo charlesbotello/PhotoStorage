@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		CB5BE4AB262CB7D600985AA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5BE4AA262CB7D600985AA7 /* AppDelegate.swift */; };
 		CB5BE4AD262CB7D600985AA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5BE4AC262CB7D600985AA7 /* SceneDelegate.swift */; };
-		CB5BE4AF262CB7D600985AA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5BE4AE262CB7D600985AA7 /* ViewController.swift */; };
+		CB5BE4AF262CB7D600985AA7 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5BE4AE262CB7D600985AA7 /* PhotoListViewController.swift */; };
 		CB5BE4B2262CB7D600985AA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5BE4B0262CB7D600985AA7 /* Main.storyboard */; };
 		CB5BE4B5262CB7D600985AA7 /* PhotoStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB5BE4B3262CB7D600985AA7 /* PhotoStorage.xcdatamodeld */; };
 		CB5BE4B7262CB7D700985AA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5BE4B6262CB7D700985AA7 /* Assets.xcassets */; };
 		CB5BE4BA262CB7D700985AA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB5BE4B8262CB7D700985AA7 /* LaunchScreen.storyboard */; };
 		CB5BE4C5262CB7D800985AA7 /* PhotoStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5BE4C4262CB7D800985AA7 /* PhotoStorageTests.swift */; };
 		CB5BE4D0262CB7D800985AA7 /* PhotoStorageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5BE4CF262CB7D800985AA7 /* PhotoStorageUITests.swift */; };
+		CB5BE4E5262CD31A00985AA7 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5BE4E4262CD31A00985AA7 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		CB5BE4A7262CB7D600985AA7 /* PhotoStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5BE4AA262CB7D600985AA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB5BE4AC262CB7D600985AA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB5BE4AE262CB7D600985AA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB5BE4AE262CB7D600985AA7 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		CB5BE4B1262CB7D600985AA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB5BE4B4262CB7D600985AA7 /* PhotoStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoStorage.xcdatamodel; sourceTree = "<group>"; };
 		CB5BE4B6262CB7D700985AA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		CB5BE4CB262CB7D800985AA7 /* PhotoStorageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoStorageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5BE4CF262CB7D800985AA7 /* PhotoStorageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageUITests.swift; sourceTree = "<group>"; };
 		CB5BE4D1262CB7D800985AA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB5BE4E4262CD31A00985AA7 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +103,15 @@
 		CB5BE4A9262CB7D600985AA7 /* PhotoStorage */ = {
 			isa = PBXGroup;
 			children = (
+				CB5BE4E3262CD2F100985AA7 /* Constants */,
 				CB5BE4AA262CB7D600985AA7 /* AppDelegate.swift */,
 				CB5BE4AC262CB7D600985AA7 /* SceneDelegate.swift */,
-				CB5BE4AE262CB7D600985AA7 /* ViewController.swift */,
+				CB5BE4E9262CD3FF00985AA7 /* Controllers */,
 				CB5BE4B0262CB7D600985AA7 /* Main.storyboard */,
 				CB5BE4B6262CB7D700985AA7 /* Assets.xcassets */,
 				CB5BE4B8262CB7D700985AA7 /* LaunchScreen.storyboard */,
 				CB5BE4BB262CB7D700985AA7 /* Info.plist */,
-				CB5BE4B3262CB7D600985AA7 /* PhotoStorage.xcdatamodeld */,
+				CB5BE4FD262CE76900985AA7 /* DataModel */,
 			);
 			path = PhotoStorage;
 			sourceTree = "<group>";
@@ -129,6 +132,30 @@
 				CB5BE4D1262CB7D800985AA7 /* Info.plist */,
 			);
 			path = PhotoStorageUITests;
+			sourceTree = "<group>";
+		};
+		CB5BE4E3262CD2F100985AA7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CB5BE4E4262CD31A00985AA7 /* Constant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CB5BE4E9262CD3FF00985AA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB5BE4AE262CB7D600985AA7 /* PhotoListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB5BE4FD262CE76900985AA7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB5BE4B3262CB7D600985AA7 /* PhotoStorage.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB5BE4B5262CB7D600985AA7 /* PhotoStorage.xcdatamodeld in Sources */,
-				CB5BE4AF262CB7D600985AA7 /* ViewController.swift in Sources */,
+				CB5BE4AF262CB7D600985AA7 /* PhotoListViewController.swift in Sources */,
+				CB5BE4E5262CD31A00985AA7 /* Constant.swift in Sources */,
 				CB5BE4AB262CB7D600985AA7 /* AppDelegate.swift in Sources */,
 				CB5BE4AD262CB7D600985AA7 /* SceneDelegate.swift in Sources */,
 			);
