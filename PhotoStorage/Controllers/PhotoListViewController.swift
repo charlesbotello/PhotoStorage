@@ -9,7 +9,6 @@ import UIKit
 
 class PhotoListViewController: UITableViewController {
 
-//    var imagesArray: [UIImage] = ["BlueLogo.png", "CreamLogo.png", "WhiteLogo.png"]
     var imagesArray: [String] = ["BlueLogo", "CreamLogo", "WhiteLogo"]
     var imageText: [String] = ["Blue", "cream", "White"]
     
@@ -32,9 +31,6 @@ class PhotoListViewController: UITableViewController {
         
         cell = tableView.dequeueReusableCell(withIdentifier: Constant.imageCell)! as UITableViewCell
         
-//        cell.imageView?.frame = CGRect(x: 300, y: 52, width: 292, height: 136)
-//        cell.imageView?.clipsToBounds = true
-//        cell.contentView.addSubview(cell.imageView!)
         let image: UIImage = UIImage(named: imagesArray[indexPath.row])!
         cell.imageView?.image = image
         cell.textLabel?.text = imageText[indexPath.row]
