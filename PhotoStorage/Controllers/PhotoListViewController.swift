@@ -7,7 +7,8 @@
 
 import UIKit
 
-class PhotoListViewController: UITableViewController {
+class PhotoListViewController: UITableViewController, UIImagePickerControllerDelegate,
+                               UINavigationControllerDelegate {
 
     var imagesArray: [String] = ["BlueLogo", "CreamLogo", "WhiteLogo"]
     var imageText: [String] = ["Blue", "cream", "White"]
@@ -35,7 +36,17 @@ class PhotoListViewController: UITableViewController {
         cell.imageView?.image = image
         cell.textLabel?.text = imageText[indexPath.row]
         return cell
-        
     }
+    
+    @IBAction func addButtonPressed(_ sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .photoLibrary;
+                imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+            }
+    }
+    
 }
 
